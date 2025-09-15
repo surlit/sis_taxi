@@ -1,0 +1,41 @@
+# Odoo specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.log
+*.pot
+*.py~ 
+*.db
+*.sqlite3
+*.egg-info/
+*.egg
+*.manifest
+*.xml
+*.csv
+
+# Node modules (if using Odoo with Node.js)
+node_modules/
+
+# Local configuration files
+*.local
+*.env
+
+# Compiled files
+*.so
+*.o
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Backup files
+*~
+*.bak
+*.tmp
