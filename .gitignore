@@ -10,9 +10,9 @@ __pycache__/
 *.sqlite3
 *.egg-info/
 *.egg
-*.manifest
-*.xml
-*.csv
+# *.manifest
+# *.xml
+# *.csv
 
 # Node modules (if using Odoo with Node.js)
 node_modules/
@@ -39,3 +39,5 @@ htmlcov/
 *~
 *.bak
 *.tmp
+
+./addons/sigees_taxi/demo
