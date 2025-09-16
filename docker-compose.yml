@@ -1,0 +1,32 @@
+version: '3.3'
+
+services:
+  sis_taxi_web_container:
+    image: odoo:17
+    container_name: sis_taxi_web_container
+    depends_on:
+      - sis_taxi_db_container
+    ports:
+      - "8070:8069"
+    volumes:
+      - sis_taxi_web_volume:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ./addons/:/mnt/extra-addons
+
+  sis_taxi_db_container:
+    image: postgres:14
+    container_name: sis_taxi_db_container
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - sis_taxi_db_volume:/var/lib/postgresql/data/pgdata
+
+volumes:
+  sis_taxi_web_volume:
+  sis_taxi_db_volume:
+
